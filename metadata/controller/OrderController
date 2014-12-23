@@ -1,0 +1,186 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "OrderController"
+    },
+    "name": "MyController",
+    "designerId": "9d36844a-c718-457a-bafa-183eaa29eca0",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "orderlist",
+                "selector": "list#orderlist"
+            },
+            "name": "orderlist",
+            "designerId": "0bcbcf57-cd08-4261-b6e7-e3aefbc00d8a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#checkoutButton",
+                "designer|targetType": "Ext.Button",
+                "fn": "checkoutButtonTapped",
+                "implHandler": [
+                    "var dataview = this.getOrderlist(),",
+                    "    store = dataview.getStore();",
+                    "",
+                    "if (store.getCount() < 1) {",
+                    "    navigator.notification.alert('Order is empty!', null, 'Checkout Error', 'Done');",
+                    "    return;",
+                    "}",
+                    "",
+                    "var orderID = \"ORDER-1000\" + Ext.idSeed++;",
+                    "",
+                    "this.deleteAll(store);",
+                    "",
+                    "navigator.notification.alert('Order received!\\nReference No.' + orderID, null, 'Checkout', 'Done');"
+                ],
+                "name": "tap"
+            },
+            "name": "checkoutButtonTapped",
+            "designerId": "8d12809c-519e-41a1-ba05-6bd0ff9b504f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#orderlist",
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "orderListItemTapped",
+                "implHandler": [
+                    "var targetEl = e.target,",
+                    "    action = targetEl.getAttribute('action'),",
+                    "    store = dataview.getStore();",
+                    "",
+                    "if (action) {",
+                    "    //console.log(action);",
+                    "",
+                    "    switch (action) {",
+                    "        case 'increase':",
+                    "            return this.increaseRow(store, record);",
+                    "        case 'decrease':",
+                    "            return this.decreaseRow(store, record);",
+                    "        case 'delete':",
+                    "            return this.deleteRow(store, record);",
+                    "    }",
+                    "}",
+                    "",
+                    "//console.log('unhandled event', e, eOpts);"
+                ],
+                "name": "itemtap"
+            },
+            "name": "orderListItemTapped",
+            "designerId": "e9787800-b65f-46e9-b353-18893cebb542"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "store",
+                    "record"
+                ],
+                "fn": "increaseRow",
+                "implHandler": [
+                    "var count = record.get('count');",
+                    "",
+                    "record.set('count', count+1);"
+                ]
+            },
+            "name": "increaseRow",
+            "designerId": "e2b7559c-b47b-4434-99d1-2a2edf2c54b5"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "store",
+                    "record"
+                ],
+                "fn": "decreaseRow",
+                "implHandler": [
+                    "var count = record.get('count');",
+                    "",
+                    "if (count > 1 ) {",
+                    "    record.set('count', count-1);",
+                    "}"
+                ]
+            },
+            "name": "decreaseRow",
+            "designerId": "453a0a06-4bf6-46f2-8e13-241f0f0e5490"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "store",
+                    "record"
+                ],
+                "fn": "deleteRow",
+                "implHandler": [
+                    "record.set('count', 0);",
+                    "store.remove(record);"
+                ]
+            },
+            "name": "deleteRow",
+            "designerId": "b5f13906-b3df-45d5-aed1-e0eced2286a8"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "store"
+                ],
+                "fn": "deleteAll",
+                "implHandler": [
+                    "store.each(function(record, index, length) {",
+                    "    record.set('count', 0);",
+                    "});",
+                    "",
+                    "store.removeAll();"
+                ]
+            },
+            "name": "deleteAll",
+            "designerId": "5b985b97-41d9-45f6-adca-3179669682c5"
+        }
+    ]
+}

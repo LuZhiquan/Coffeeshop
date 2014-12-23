@@ -1,0 +1,82 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "coffeecontainer",
+        "designer|userClassName": "CoffeeContainer",
+        "layout": "fit",
+        "scrollable": null
+    },
+    "name": "MyContainer",
+    "designerId": "6b2e6828-6dd7-4092-8562-046eb90c87fa",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "height": 60,
+                "title": "Coffee"
+            },
+            "name": "MyToolbar2",
+            "designerId": "6b7174bf-cb11-4d0e-b821-0e492db35de5"
+        },
+        {
+            "type": "Ext.dataview.DataView",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "dataview-horizontal"
+                ],
+                "inline": [
+                    "true"
+                ],
+                "itemCls": "itemWrapper",
+                "itemId": "coffeedataview",
+                "mode": null,
+                "scrollable": "vertical",
+                "store": "CoffeeStore"
+            },
+            "name": "MyDataView",
+            "designerId": "2e3b45d9-4ae8-46e0-a5d8-e7556e86ceeb",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div class='itemImageWrapper' style=\"background-image: url(resources/images/{image});\" >",
+                            "</div>",
+                            "<div class='itemName'>{name}</div>",
+                            "<div class='itemCount'>",
+                            "    <tpl if=\"count &gt; 0\">",
+                            "        ({count} X)",
+                            "        <input action='delete' class='itemDelete' type='button' value='X'/>",
+                            "    </tpl>",
+                            "</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "aa104d03-f003-40c5-80ab-be9bc2701e52"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,73 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "    {",
+            "        \"name\": \"Hamburger\",",
+            "        \"image\": \"snacks/hamburger.jpg\",",
+            "        \"id\": \"S-eum\",",
+            "        \"category\": \"SNACK\"",
+            "    },",
+            "    {",
+            "        \"name\": \"Chicken Burger\",",
+            "        \"image\": \"snacks/chickenBurger.jpg\",",
+            "        \"id\": \"S-quam\",",
+            "        \"category\": \"SNACK\"",
+            "    },",
+            "    {",
+            "        \"name\": \"Chicken Pie\",",
+            "        \"image\": \"snacks/chickenPie.jpg\",",
+            "        \"id\": \"S-porro\",",
+            "        \"category\": \"SNACK\"",
+            "    },",
+            "    {",
+            "        \"name\": \"Sausage Roles\",",
+            "        \"image\": \"snacks/sausageRole.jpg\",",
+            "        \"id\": \"S-eum\",",
+            "        \"category\": \"SNACK\"",
+            "    },",
+            "    {",
+            "        \"name\": \"French Fries\",",
+            "        \"image\": \"snacks/frenchFries.jpg\",",
+            "        \"id\": \"S-velit\",",
+            "        \"category\": \"SNACK\"",
+            "    }",
+            "]"
+        ],
+        "designer|userClassName": "SnacksStore",
+        "model": "Product",
+        "storeId": "SnacksStore"
+    },
+    "name": "MyArrayStore",
+    "designerId": "19c574bf-4618-4c46-b8cb-428c77e32105",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyAjaxProxy1",
+            "designerId": "357f52b5-74dd-479d-b074-f6eb3173d925",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Array",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyArrayReader1",
+                    "designerId": "aea9db54-d493-4d0e-a322-dd8d9849442b"
+                }
+            ]
+        }
+    ]
+}

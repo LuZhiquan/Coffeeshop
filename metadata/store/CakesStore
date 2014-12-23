@@ -1,0 +1,79 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "    {",
+            "        \"name\": \"Chocolate Cake\",",
+            "        \"image\": \"cakes/chococake.jpg\",",
+            "        \"id\": \"K-CHOC\",",
+            "        \"category\": \"CAKE\"",
+            "    },",
+            "    {",
+            "        \"name\": \"Carrot Cake\",",
+            "        \"image\": \"cakes/carrotcake.jpg\",",
+            "        \"id\": \"K-CARR\",",
+            "        \"category\": \"CAKE\"",
+            "    },",
+            "    {",
+            "        \"name\": \"Special Cake!\",",
+            "        \"image\": \"cakes/specialCake.jpg\",",
+            "        \"id\": \"K-SPEC\",",
+            "        \"category\": \"CAKE\"",
+            "    },",
+            "    {",
+            "        \"name\": \"Cookies\",",
+            "        \"image\": \"cakes/cookies.jpg\",",
+            "        \"id\": \"K-COOK\",",
+            "        \"category\": \"CAKE\"",
+            "    },",
+            "    {",
+            "        \"name\": \"Cupcakes\",",
+            "        \"image\": \"cakes/cupcake.jpg\",",
+            "        \"id\": \"K-CUP\",",
+            "        \"category\": \"CAKE\"",
+            "    },",
+            "    {",
+            "        \"name\": \"Blueberry Muffin\",",
+            "        \"image\": \"cakes/blueberrymuffin.jpg\",",
+            "        \"id\": \"K-BLMU\",",
+            "        \"category\": \"CAKE\"",
+            "    }",
+            "]"
+        ],
+        "designer|userClassName": "CakesStore",
+        "model": "Product",
+        "storeId": "CakesStore"
+    },
+    "name": "MyArrayStore",
+    "designerId": "9c2a3739-fc12-44a0-8302-d675cabdb8d8",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyAjaxProxy2",
+            "designerId": "9f687a66-0891-4629-90f2-6b1722488243",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Array",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyArrayReader2",
+                    "designerId": "08bc2947-4108-497b-96f6-dbf687415274"
+                }
+            ]
+        }
+    ]
+}

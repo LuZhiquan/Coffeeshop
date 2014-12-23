@@ -1,0 +1,100 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "ordercontainer",
+        "designer|userClassName": "OrderContainer",
+        "layout": "fit"
+    },
+    "name": "MyContainer2",
+    "designerId": "219789ab-0fcb-4925-bfe9-a9b52ed2247b",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "height": 60,
+                "title": "Order"
+            },
+            "name": "MyToolbar1",
+            "designerId": "a2c99e05-8440-44d9-8968-92436d712a07",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "confirm",
+                        "docked": "right",
+                        "itemId": "checkoutButton",
+                        "text": "Checkout",
+                        "ui": "confirm",
+                        "width": 100
+                    },
+                    "name": "MyButton",
+                    "designerId": "aaf03f49-982a-42cd-bbbd-d69b2defbac5"
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "deferEmptyText": false,
+                "designer|displayName": null,
+                "emptyText": "Empty order list!<BR/><BR/><i>Start by ordering some items.</i>",
+                "grouped": true,
+                "itemId": "orderlist",
+                "store": "OrderStore"
+            },
+            "name": "MyList",
+            "designerId": "2c88e594-90bc-44e3-84fb-1ce71498148b",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "orderListItemTpl",
+                        "implHandler": [
+                            "<table class=\"orderItemWrapper\">",
+                            "    <tr>",
+                            "        <td class=\"orderItemImage\" style=\"background-image: url(resources/images/{image});\" />",
+                            "        <td class=\"orderItemLabel\">{name} ({count} x)</td>",
+                            "        <td class=\"orderItemButtons1\">",
+                            "            <input action='decrease' class=\"orderItemDecrease\" type='button' value='-'>",
+                            "            <input action='increase' class=\"orderItemIncrease\" type='button' value='+'>",
+                            "        </td>",
+                            "        <td class=\"orderItemButtons2\">",
+                            "            <input action='delete' class=\"orderItemDelete\" type='button' value='X'>",
+                            "        </td>",
+                            "    </tr>",
+                            "</table>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "9ba96fa2-6e56-416e-9971-f8787e521350"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "snackscontainer",
+        "designer|userClassName": "SnacksContainer",
+        "layout": "fit"
+    },
+    "name": "MyContainer1",
+    "designerId": "2041e823-dad8-417d-8f7e-c42137a38859",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "height": 60,
+                "title": "Snacks"
+            },
+            "name": "MyToolbar4",
+            "designerId": "ce91129d-91cd-4e38-9a00-cd4f14bbe4bf"
+        },
+        {
+            "type": "Ext.dataview.DataView",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "dataview-horizontal"
+                ],
+                "inline": [
+                    "true"
+                ],
+                "itemCls": "itemWrapper",
+                "itemId": "snacksdataview",
+                "scrollable": "vertical",
+                "store": "SnacksStore"
+            },
+            "name": "MyDataView1",
+            "designerId": "65e45ced-d2a0-4471-918e-b122be033939",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div class='itemImageWrapper' style=\"background-image: url(resources/images/{image});\" >",
+                            "</div>",
+                            "<div class='itemName'>{name}</div>",
+                            "<div class='itemCount'>",
+                            "    <tpl if=\"count &gt; 0\">",
+                            "        ({count} X)",
+                            "        <input action='delete' class='itemDelete' type='button' value='X'/>",
+                            "    </tpl>",
+                            "</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "32a4cf94-dd5d-424e-bfa9-27952731eefb"
+                }
+            ]
+        }
+    ]
+}

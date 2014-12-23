@@ -1,0 +1,72 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "RegisterController",
+        "views": [
+            "RegisterPanel",
+            "HomePanel"
+        ]
+    },
+    "name": "MyController",
+    "designerId": "3b2d8e8a-d050-4c25-a047-5319b4682382",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#registerback",
+                "designer|targetType": "Ext.Button",
+                "fn": "registerBackTapped",
+                "implHandler": [
+                    "var navigationView = button.up('#mainnavview');",
+                    "navigationView.pop();"
+                ],
+                "name": "tap"
+            },
+            "name": "registerBackTapped",
+            "designerId": "5288a9bf-f7a9-4d00-af57-f7f6e118b6d8"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#registerDoneButton",
+                "designer|targetType": "Ext.Button",
+                "fn": "registerDoneTapped",
+                "implHandler": [
+                    "var panel = button.up('panel'),",
+                    "    usernameField = panel.down('#username'),",
+                    "    passwordField = panel.down('#password'),",
+                    "    confirmField = panel.down('#confirm'),",
+                    "    username = usernameField.getValue(),",
+                    "    password = passwordField.getValue(),",
+                    "    confirm = confirmField.getValue();",
+                    "",
+                    "// Check username is valid and unique",
+                    "",
+                    "// Check password and confirm match and are safe (min 6 chars)",
+                    "",
+                    "// Show homepage",
+                    "var navigationView = button.up('#mainnavview');",
+                    "navigationView.push(Ext.create('Coffeeshop.view.HomePanel'));"
+                ],
+                "name": "tap"
+            },
+            "name": "registerDoneTapped",
+            "designerId": "3d1dcffd-6fd2-4320-9a2c-e614d812eda5"
+        }
+    ]
+}

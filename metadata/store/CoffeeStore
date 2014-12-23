@@ -1,0 +1,79 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "    {",
+            "        \"name\": \"Cappuccino\",",
+            "        \"image\": \"coffee/cappuccino.jpg\",",
+            "        \"id\": \"C-CAPP\",",
+            "        \"category\": \"COFFEE\"",
+            "    },",
+            "    {",
+            "        \"name\": \"Coffee Special\",",
+            "        \"image\": \"coffee/coffeeSpecial.jpg\",",
+            "        \"id\": \"C-COSP\",",
+            "        \"category\": \"COFFEE\"",
+            "    },",
+            "    {",
+            "        \"name\": \"Hot Chocolate\",",
+            "        \"image\": \"coffee/hotchocolate.jpg\",",
+            "        \"id\": \"C-HOCH\",",
+            "        \"category\": \"COFFEE\"",
+            "    },",
+            "    {",
+            "        \"name\": \"Latte Machiato\",",
+            "        \"image\": \"coffee/lattemachiato.jpg\",",
+            "        \"id\": \"C-LAMA\",",
+            "        \"category\": \"COFFEE\"",
+            "    },",
+            "    {",
+            "        \"name\": \"Espresso\",",
+            "        \"image\": \"coffee/espresso.jpg\",",
+            "        \"id\": \"C-ESPR\",",
+            "        \"category\": \"COFFEE\"",
+            "    },",
+            "    {",
+            "        \"name\": \"Tea\",",
+            "        \"image\": \"coffee/tea.jpg\",",
+            "        \"id\": \"C-TEA\",",
+            "        \"category\": \"COFFEE\"",
+            "    }",
+            "]"
+        ],
+        "designer|userClassName": "CoffeeStore",
+        "model": "Product",
+        "storeId": "CoffeeStore"
+    },
+    "name": "MyArrayStore",
+    "designerId": "442eef15-0358-4f14-b5bd-98150651c772",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyAjaxProxy",
+            "designerId": "080de020-5908-4308-9040-d3b882fc1be8",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Array",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyArrayReader",
+                    "designerId": "c68ba997-0b38-4987-adff-0259377ce985"
+                }
+            ]
+        }
+    ]
+}

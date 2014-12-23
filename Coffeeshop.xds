@@ -1,0 +1,78 @@
+{
+    "name": "Coffeeshop",
+    "settings": {
+        "cmd": {
+            "license": "commercial",
+            "cmdVersion": "5.1.0.26",
+            "frameworkVersion": "2.4.0.482"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "iPhone 5",
+                "builtIn": true,
+                "height": 568,
+                "width": 320
+            },
+            "viewportOrientation": "landscape"
+        },
+        "urlPrefix": "http://localhost:1841",
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "projectHasEnabledWebServer": false,
+        "lastBuildSelection": {
+            "value": "nativeBuild",
+            "display": "Native Build"
+        },
+        "lockUrlPrefix": false,
+        "installStatus": "Not Installed"
+    },
+    "xdsVersion": "3.1.0",
+    "xdsBuild": 1943,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000007,
+    "framework": "touch24",
+    "viewOrderMap": {
+        "view": [
+            "2d19aa4c-6cf1-4042-9eb0-df5fbfe2eff8",
+            "43506370-476a-44fe-a3b6-82aad9514fff",
+            "4026882c-c034-44ba-aba1-d3aa365c20eb",
+            "6b2e6828-6dd7-4092-8562-046eb90c87fa",
+            "2041e823-dad8-417d-8f7e-c42137a38859",
+            "219789ab-0fcb-4925-bfe9-a9b52ed2247b",
+            "218bb1ce-7582-462f-a29b-f68733521d5b",
+            "eb914d8e-e185-4f7d-833b-ce34cf4a8508"
+        ],
+        "store": [
+            "442eef15-0358-4f14-b5bd-98150651c772",
+            "19c574bf-4618-4c46-b8cb-428c77e32105",
+            "9c2a3739-fc12-44a0-8302-d675cabdb8d8",
+            "2b774f68-f550-41e6-a27f-e149409b7a8c"
+        ],
+        "controller": [
+            "b212cd37-7417-4c2d-92e7-0a15405c2eb5",
+            "0eead8c5-69cd-45c4-bae3-bbe4b32d60dc",
+            "010e6e9b-33ce-4ff2-9ea0-74d4b8d9c7f2",
+            "7d264f75-5d12-452c-8ec5-eb096d8cacbd",
+            "3b2d8e8a-d050-4c25-a047-5319b4682382",
+            "9d36844a-c718-457a-bafa-183eaa29eca0"
+        ],
+        "model": [
+            "9595dd3e-4453-455f-801c-bd7370f2d7df",
+            "ca933b09-fa81-4d5a-8cb4-b76be2a5d67e",
+            "90e972b6-54ed-46ad-ad1c-0b7acd993e27"
+        ],
+        "resource": [
+            "2a599962-9439-418e-b1d9-90530e7270ba",
+            "e55cf380-8616-449a-adb7-ea82a978b554"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

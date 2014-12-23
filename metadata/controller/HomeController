@@ -1,0 +1,16 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "HomeController",
+        "views": [
+            "HomePanel"
+        ]
+    },
+    "name": "MyController",
+    "designerId": "010e6e9b-33ce-4ff2-9ea0-74d4b8d9c7f2"
+}

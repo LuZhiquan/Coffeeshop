@@ -1,0 +1,183 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "RegisterPanel"
+    },
+    "name": "MyPanel",
+    "designerId": "218bb1ce-7582-462f-a29b-f68733521d5b",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "height": 60,
+                "title": "Register"
+            },
+            "name": "MyToolbar3",
+            "designerId": "76b3316c-4cbc-4ecf-ba7a-191e19777f50",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "back",
+                        "itemId": "registerback",
+                        "text": "Back",
+                        "ui": "back"
+                    },
+                    "name": "MyButton",
+                    "designerId": "f24952eb-b444-4157-8401-21c77c04b787"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "confirm",
+                        "docked": "right",
+                        "itemId": "registerDoneButton",
+                        "text": "Done",
+                        "ui": "confirm",
+                        "width": 100
+                    },
+                    "name": "MyButton1",
+                    "designerId": "f0170249-bb77-4c67-9505-da528382d909"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": null,
+                "centered": true,
+                "container|align": null,
+                "designer|displayName": "RegisterPanel",
+                "height": "100%",
+                "layout": "vbox",
+                "maxHeight": null,
+                "maxWidth": 300,
+                "minHeight": null,
+                "minWidth": null,
+                "padding": 10,
+                "width": "100%"
+            },
+            "name": "MyContainer1",
+            "designerId": "41a32a27-dbdf-436c-971b-9afea4cdbc31",
+            "cn": [
+                {
+                    "type": "Ext.form.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "centered": null,
+                        "container|align": "center",
+                        "container|pack": null,
+                        "defaults": [
+                            "{",
+                            "    margin: '5px',",
+                            "    labelWidth: '90px'",
+                            "}"
+                        ],
+                        "designer|displayName": "RegisterFormPanel",
+                        "height": 210,
+                        "layout": "vbox",
+                        "scrollable": "horizontal",
+                        "width": "100%"
+                    },
+                    "name": "MyFormPanel1",
+                    "designerId": "e1b0997b-891b-4c57-a43a-eb40650148c8",
+                    "cn": [
+                        {
+                            "type": "Ext.field.Email",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "username",
+                                "label": "Username:",
+                                "labelWidth": null,
+                                "placeHolder": "afsoun@me.com"
+                            },
+                            "name": "MyEmailField",
+                            "designerId": "75503d40-98ef-40f9-8297-8f930a8781d4"
+                        },
+                        {
+                            "type": "Ext.field.Password",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "password",
+                                "label": "Password:",
+                                "placeHolder": "password"
+                            },
+                            "name": "MyPasswordField2",
+                            "designerId": "128e519d-868e-44a5-8cef-e9f3e822f915"
+                        },
+                        {
+                            "type": "Ext.field.Password",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "confirm",
+                                "label": "Confirm:",
+                                "placeHolder": "retype password"
+                            },
+                            "name": "MyPasswordField",
+                            "designerId": "8cafdc95-1a40-495d-bb66-a23380451312"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|pack": "end",
+                "designer|uiInterfaceName": "light",
+                "docked": "bottom",
+                "height": 55,
+                "ui": "light"
+            },
+            "name": "MyToolbar",
+            "designerId": "affcfbd9-bcb0-4d3b-be9a-e06af86ffb6f"
+        }
+    ]
+}

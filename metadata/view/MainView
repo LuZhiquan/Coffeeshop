@@ -1,0 +1,32 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MainView",
+        "fullscreen": false,
+        "itemId": "mainnavview"
+    },
+    "name": "MyNavigationView",
+    "designerId": "4026882c-c034-44ba-aba1-d3aa365c20eb",
+    "cn": [
+        {
+            "type": "Ext.navigation.Bar",
+            "reference": {
+                "name": "navigationBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": null,
+                "hidden": true,
+                "itemId": null
+            },
+            "name": "MyNavigationBar",
+            "designerId": "dde61f6c-c190-41f4-ac7d-fcf63bdc2849"
+        }
+    ]
+}

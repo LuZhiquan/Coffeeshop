@@ -1,0 +1,93 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MainController",
+        "views": [
+            "WelcomePanel",
+            "MainView"
+        ]
+    },
+    "name": "MyController",
+    "designerId": "b212cd37-7417-4c2d-92e7-0a15405c2eb5",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "var me = this;",
+                    "console.log('controller launched.');",
+                    "",
+                    "if (!this.checkPlugins()) return;",
+                    "//navigator.notification.alert('plugins checked successfuly.', null, 'DEBUG', 'Dismiss');",
+                    "",
+                    "// Wait for device ready event",
+                    "document.addEventListener(\"deviceready\", function () {",
+                    "    //navigator.notification.alert(\"device is ready\", \"Debug\");",
+                    "    me.showInitialView();",
+                    "}, false);"
+                ]
+            },
+            "name": "launch",
+            "designerId": "b6696a97-e87b-4de8-b43f-df96257d3c0d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "checkPlugins",
+                "implHandler": [
+                    "if (!Ext.isDefined(window.device)) {",
+                    "    alert('DEBUG: device plugin is not ready.');",
+                    "    return false;",
+                    "}",
+                    "",
+                    "if (!Ext.isDefined(window.navigator)) {",
+                    "    alert('DEBUG: navigator plugin is not ready.');",
+                    "    return false;",
+                    "}",
+                    "",
+                    "if (!Ext.isDefined(window.navigator.notification)) {",
+                    "    alert('DEBUG: navigator.notification plugin is not ready.');",
+                    "    return false;",
+                    "}",
+                    "",
+                    "return true;"
+                ]
+            },
+            "name": "checkPlugins",
+            "designerId": "6c0fbd9f-3693-4680-8751-0fe995b7c72d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "showInitialView",
+                "implHandler": [
+                    "var mainView = Ext.create('Coffeeshop.view.MainView', {fullscreen: true});",
+                    "mainView.push(Ext.create('Coffeeshop.view.WelcomePanel'));"
+                ]
+            },
+            "name": "showInitialView",
+            "designerId": "251df3bb-0519-4034-96b7-48c4a5fc706b"
+        }
+    ]
+}

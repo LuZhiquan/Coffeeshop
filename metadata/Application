@@ -1,0 +1,37 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "MainController",
+            "WelcomeController",
+            "HomeController",
+            "ProductController",
+            "RegisterController",
+            "OrderController"
+        ],
+        "models": [
+            "Order",
+            "User",
+            "Product"
+        ],
+        "name": "Coffeeshop",
+        "stores": [
+            "CoffeeStore",
+            "SnacksStore",
+            "CakesStore",
+            "OrderStore"
+        ],
+        "views": [
+            "CoffeeContainer",
+            "SnacksContainer",
+            "CakesContainer"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}

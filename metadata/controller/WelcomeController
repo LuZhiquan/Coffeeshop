@@ -1,0 +1,69 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "WelcomeController",
+        "views": [
+            "WelcomePanel",
+            "RegisterPanel"
+        ]
+    },
+    "name": "MyController",
+    "designerId": "0eead8c5-69cd-45c4-bae3-bbe4b32d60dc",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#loginButton",
+                "designer|targetType": "Ext.Button",
+                "fn": "loginTapped",
+                "implHandler": [
+                    "var form = button.up('formpanel'),",
+                    "    usernameField = form.down('#username'),",
+                    "    passwordField = form.down('#password'),",
+                    "    username = usernameField.getValue(),",
+                    "    password = passwordField.getValue();",
+                    "",
+                    "// TODO: check username and password",
+                    "",
+                    "// Show home page",
+                    "var navigationView = form.up('#mainnavview');",
+                    "navigationView.push(Ext.create('Coffeeshop.view.HomePanel'));"
+                ],
+                "name": "tap"
+            },
+            "name": "loginTapped",
+            "designerId": "7d573fcf-325d-4c8a-8a50-52ed32ed8e8e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#registerButton",
+                "designer|targetType": "Ext.Button",
+                "fn": "registerTapped",
+                "implHandler": [
+                    "// Show register page",
+                    "var navigationView = button.up('#mainnavview');",
+                    "navigationView.push(Ext.create('Coffeeshop.view.RegisterPanel'));"
+                ],
+                "name": "tap"
+            },
+            "name": "registerTapped",
+            "designerId": "9bbbdb46-e664-4f3c-84d7-68e0a912c843"
+        }
+    ]
+}

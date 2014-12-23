@@ -1,0 +1,380 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ProductController",
+        "uses": [
+            "Ext.picker.Picker"
+        ],
+        "views": [
+            "CoffeeContainer",
+            "SnacksContainer",
+            "CakesContainer"
+        ]
+    },
+    "name": "MyController",
+    "designerId": "7d264f75-5d12-452c-8ec5-eb096d8cacbd",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "orderlist",
+                "selector": "list#orderlist"
+            },
+            "name": "orderlist",
+            "designerId": "88d6e9ff-646f-4c80-a8d5-90d52783a849"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "dataview#coffeedataview",
+                "designer|targetType": "Ext.dataview.DataView",
+                "fn": "coffeeDataViewItemTapped",
+                "implHandler": [
+                    "var targetEl = e.target,",
+                    "    action = targetEl.getAttribute('action'),",
+                    "    name = record.get('name'),",
+                    "    picker = this.getCoffeePicker();",
+                    "",
+                    "if (action == 'delete') {",
+                    "    this.deleteOrder(record);",
+                    "} else {",
+                    "    picker.getToolbar().setTitle(name);",
+                    "    picker.record = record;",
+                    "    picker.show();",
+                    "}"
+                ],
+                "name": "itemsingletap"
+            },
+            "name": "coffeeDataViewItemTapped",
+            "designerId": "50a6ab89-022d-4929-97af-0a3ae5adf42e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "dataview#snacksdataview",
+                "designer|targetType": "Ext.dataview.DataView",
+                "fn": "snacksDataViewItemTapped",
+                "implHandler": [
+                    "var targetEl = e.target,",
+                    "    action = targetEl.getAttribute('action'),",
+                    "    name = record.get('name'),",
+                    "    picker = this.getSnacksPicker();",
+                    "",
+                    "if (action == 'delete') {",
+                    "    this.deleteOrder(record);",
+                    "} else {",
+                    "    picker.getToolbar().setTitle(name);",
+                    "    picker.record = record;",
+                    "    picker.show();",
+                    "}"
+                ],
+                "name": "itemsingletap"
+            },
+            "name": "snacksDataViewItemTapped",
+            "designerId": "bd4ef50d-4ec2-4a10-b0a2-4bd5d5c08e94"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "dataview#cakesdataview",
+                "designer|targetType": "Ext.dataview.DataView",
+                "fn": "cakesDataViewItemTapped",
+                "implHandler": [
+                    "var targetEl = e.target,",
+                    "    action = targetEl.getAttribute('action'),",
+                    "    name = record.get('name'),",
+                    "    picker = this.getCakesPicker();",
+                    "",
+                    "if (action == 'delete') {",
+                    "    this.deleteOrder(record);",
+                    "} else {",
+                    "    picker.getToolbar().setTitle(name);",
+                    "    picker.record = record;",
+                    "    picker.show();",
+                    "}"
+                ],
+                "name": "itemsingletap"
+            },
+            "name": "cakesDataViewItemTapped",
+            "designerId": "a9bb4cac-65c4-4f55-bbc6-73d87cb5b148"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "picker#coffeePicker",
+                "designer|targetType": "Ext.picker.Picker",
+                "fn": "coffeePickerChanged",
+                "implHandler": [
+                    "var record = picker.record,",
+                    "    name = record.get('name'),",
+                    "    count = value.count;",
+                    "",
+                    "navigator.notification.alert('Adding ' + count + ' cup(s) of :' + name, null, 'Order');",
+                    "",
+                    "this.addOrder(record, count);"
+                ],
+                "name": "change"
+            },
+            "name": "coffeePickerChanged",
+            "designerId": "2cc6f7bd-a88b-47a6-9e12-8420862af1c4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "picker#snacksPicker",
+                "designer|targetType": "Ext.picker.Picker",
+                "fn": "snacksPickerChanged",
+                "implHandler": [
+                    "var record = picker.record,",
+                    "    name = record.get('name'),",
+                    "    count = value.count;",
+                    "",
+                    "navigator.notification.alert('Adding ' + count + ' serving(s) of :' + name, null, 'Order');",
+                    "",
+                    "this.addOrder(record, count);"
+                ],
+                "name": "change"
+            },
+            "name": "snacksPickerChanged",
+            "designerId": "6c30208f-c992-4787-aeae-4c2610d46da4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "picker#cakesPicker",
+                "designer|targetType": "Ext.picker.Picker",
+                "fn": "cakesPickerChanged",
+                "implHandler": [
+                    "var record = picker.record,",
+                    "    name = record.get('name'),",
+                    "    count = value.count;",
+                    "",
+                    "navigator.notification.alert('Adding ' + count + ' slice(s) of :' + name, null, 'Order');",
+                    "",
+                    "this.addOrder(record, count);"
+                ],
+                "name": "change"
+            },
+            "name": "cakesPickerChanged",
+            "designerId": "f82e92cb-cab8-4900-96c6-45dfee94d9eb"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "itemId",
+                    "data"
+                ],
+                "fn": "createPicker",
+                "implHandler": [
+                    "return Ext.Viewport.add({",
+                    "    xtype: 'picker',",
+                    "    itemId: itemId,",
+                    "    slots: [",
+                    "        {",
+                    "            name : 'count',",
+                    "            data : data",
+                    "        }",
+                    "    ]",
+                    "});",
+                    "    "
+                ]
+            },
+            "name": "createPicker",
+            "designerId": "265fd66b-7637-4906-95ad-2e574625d9ef"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "getCoffeePicker",
+                "implHandler": [
+                    "var picker;",
+                    "",
+                    "if (this.coffeePicker) {",
+                    "    picker = this.coffeePicker;",
+                    "} else {",
+                    "    this.coffeePicker = picker = this.createPicker('coffeePicker', [",
+                    "        {text: '1 Cup', value: 1},",
+                    "        {text: '2 Cups', value: 2},",
+                    "        {text: '3 Cups', value: 3},",
+                    "        {text: '4 Cups', value: 4},",
+                    "        {text: '5 Cups', value: 5},",
+                    "        {text: '10 Cups', value: 10},",
+                    "        {text: '15 Cups', value: 15},",
+                    "        {text: '20 Cups', value: 20},",
+                    "        {text: '50 Cups', value: 50},",
+                    "        {text: '100 Cups', value: 100}",
+                    "    ]);",
+                    "}",
+                    "",
+                    "return picker;"
+                ]
+            },
+            "name": "getCoffeePicker",
+            "designerId": "2269bb26-c309-4093-9441-1e28082e36cd"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "getSnacksPicker",
+                "implHandler": [
+                    "var picker;",
+                    "",
+                    "if (this.snacksPicker) {",
+                    "    picker = this.snacksPicker;",
+                    "} else {",
+                    "    this.snacksPicker = picker = this.createPicker('snacksPicker', [",
+                    "        {text: '1 Serving', value: 1},",
+                    "        {text: '2 Servings', value: 2},",
+                    "        {text: '3 Servings', value: 3},",
+                    "        {text: '4 Servings', value: 4},",
+                    "        {text: '5 Servings', value: 5}",
+                    "    ]);",
+                    "}",
+                    "",
+                    "return picker;"
+                ]
+            },
+            "name": "getSnacksPicker",
+            "designerId": "35aa9e73-cc7a-454a-bb3d-ad17c0ae4e9d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "getCakesPicker",
+                "implHandler": [
+                    "var picker;",
+                    "",
+                    "if (this.cakesPicker) {",
+                    "    picker = this.cakesPicker;",
+                    "} else {",
+                    "    this.cakesPicker = picker = this.createPicker('cakesPicker', [",
+                    "        {text: '1 Slice', value: 1},",
+                    "        {text: '2 Slices', value: 2},",
+                    "        {text: '3 Slices', value: 3},",
+                    "        {text: '4 Slices', value: 4},",
+                    "        {text: '5 Slices', value: 5},",
+                    "        {text: '10 Slices', value: 10}",
+                    "    ]);",
+                    "}",
+                    "",
+                    "return picker;"
+                ]
+            },
+            "name": "getCakesPicker",
+            "designerId": "2bbee15d-4d87-4c01-8dbb-af919cbab018"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "record",
+                    "count"
+                ],
+                "fn": "addOrder",
+                "implHandler": [
+                    "var currentCount = record.get('count'),",
+                    "    orderList = this.getOrderlist(),",
+                    "    orderStore = orderList.getStore();",
+                    "",
+                    "// Increase the count value",
+                    "record.set('count', count + currentCount);",
+                    "",
+                    "// ExtJs will automatically update if record is already added to the store",
+                    "// id field indicate uniqueness of models",
+                    "orderStore.add(record);"
+                ]
+            },
+            "name": "addOrder",
+            "designerId": "9d1517ca-8b15-42e9-8e8f-dee852587638"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "record"
+                ],
+                "fn": "deleteOrder",
+                "implHandler": [
+                    "var orderList = this.getOrderlist(),",
+                    "    orderStore = orderList.getStore();",
+                    "",
+                    "record.set('count', 0);",
+                    "orderStore.remove(record);"
+                ]
+            },
+            "name": "deleteOrder",
+            "designerId": "61b4a337-fdb4-4609-9f9a-e32ba9e3e459"
+        }
+    ]
+}

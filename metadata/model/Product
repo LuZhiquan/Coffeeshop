@@ -1,0 +1,85 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Product"
+    },
+    "name": "MyModel",
+    "designerId": "90e972b6-54ed-46ad-ad1c-0b7acd993e27",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name"
+            },
+            "name": "field",
+            "designerId": "605f3638-be92-4d84-b6a2-451c2da55650"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "image"
+            },
+            "name": "field1",
+            "designerId": "2fc953c3-0924-4a31-862b-16aeccd49298"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "field2",
+            "designerId": "ab39abeb-509f-458f-b809-114381dc86dd"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "category"
+            },
+            "name": "field3",
+            "designerId": "c8594e61-b39b-407e-9b74-9d4fd342c2d5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowNull": false,
+                "defaultValue": [
+                    "0"
+                ],
+                "name": "count",
+                "type": "int"
+            },
+            "name": "field4",
+            "designerId": "be223b7a-f5da-4650-a60e-3333e8941b30"
+        }
+    ]
+}

@@ -1,0 +1,93 @@
+{
+    "type": "Ext.tab.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "HomePanel"
+    },
+    "name": "MyTabPanel",
+    "designerId": "2d19aa4c-6cf1-4042-9eb0-df5fbfe2eff8",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "star",
+                "title": "Coffee"
+            },
+            "name": "coffeecontainer1",
+            "designerId": "b94fa981-7a89-4ac2-800b-72b5c768052e",
+            "masterInstanceId": "6b2e6828-6dd7-4092-8562-046eb90c87fa"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "bookmarks",
+                "title": "Snack"
+            },
+            "name": "snackscontainer1",
+            "designerId": "93d58f1a-5916-40cd-8aa7-2fa3fae48220",
+            "masterInstanceId": "2041e823-dad8-417d-8f7e-c42137a38859"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "download",
+                "title": "Cake",
+                "ui": null
+            },
+            "name": "cakescontainer1",
+            "designerId": "861893dc-10ef-43a5-ac1b-5c7afd1ef2ef",
+            "masterInstanceId": "eb914d8e-e185-4f7d-833b-ce34cf4a8508"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "user",
+                "title": "Order"
+            },
+            "name": "ordercontainer1",
+            "designerId": "72a408de-2fb4-46b1-8eed-9f261d1b0110",
+            "masterInstanceId": "219789ab-0fcb-4925-bfe9-a9b52ed2247b"
+        },
+        {
+            "type": "Ext.tab.Bar",
+            "reference": {
+                "name": "tabBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|pack": "center",
+                "designer|uiInterfaceName": "light",
+                "docked": "bottom",
+                "height": 55,
+                "ui": "light"
+            },
+            "name": "MyTabBar",
+            "designerId": "fdc0cd68-42cb-4d78-8468-c09acc0f88f3"
+        }
+    ]
+}

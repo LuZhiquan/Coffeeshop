@@ -1,0 +1,277 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "center",
+        "container|pack": "center",
+        "designer|userClassName": "WelcomePanel",
+        "layout": "hbox",
+        "ui": null
+    },
+    "name": "MyPanel1",
+    "designerId": "43506370-476a-44fe-a3b6-82aad9514fff",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "height": 60,
+                "title": "Welcome to our Coffeeshop"
+            },
+            "name": "MyToolbar",
+            "designerId": "248c2122-1b6a-4c5a-942e-0af0390473fc"
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": null,
+                "container|align": "center",
+                "container|pack": "center",
+                "height": "100%",
+                "layout": "vbox",
+                "padding": null,
+                "scrollable": false,
+                "width": 300
+            },
+            "name": "MyFormPanel2",
+            "designerId": "507908b4-b342-47de-a2e7-36de66e1eaa5",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 120
+                    },
+                    "name": "MyContainer4",
+                    "designerId": "7e05b6fb-f6be-4813-9a12-3ec345f30543",
+                    "cn": [
+                        {
+                            "type": "Ext.field.Email",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "username",
+                                "label": "Username:",
+                                "labelWidth": "90px",
+                                "margin": 5,
+                                "name": null,
+                                "placeHolder": "afsoun@me.com"
+                            },
+                            "name": "MyEmailField1",
+                            "designerId": "9fb41dff-0c44-4e2b-b54c-fcd4472d90fa"
+                        },
+                        {
+                            "type": "Ext.field.Password",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "password",
+                                "label": "Password:",
+                                "labelWidth": "90px",
+                                "margin": 5,
+                                "name": null,
+                                "placeHolder": "mypassword"
+                            },
+                            "name": "MyPasswordField1",
+                            "designerId": "fdbb9f0e-3305-4017-8665-81efc1bd46f4"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": null,
+                        "designer|uiInterfaceName": "action-round",
+                        "height": 47,
+                        "itemId": "loginButton",
+                        "text": "Login",
+                        "ui": "action-round",
+                        "width": 90
+                    },
+                    "name": "MyButton6",
+                    "designerId": "836e0360-67a5-4fbd-bc08-ccdf9adbf5b9"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "center",
+                "container|pack": "center",
+                "designer|displayName": "RegisterContainer",
+                "height": "100%",
+                "itemId": "RegisterContainer",
+                "layout": "vbox",
+                "width": 300
+            },
+            "name": "MyContainer3",
+            "designerId": "ce779cef-f74b-48d9-96a5-3053f6b10804",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "designer|displayName": "RegisterContainer1",
+                        "height": 120,
+                        "itemId": "RegisterContainer1",
+                        "layout": "vbox",
+                        "width": "100%"
+                    },
+                    "name": "MyContainer5",
+                    "designerId": "07695fdd-62cf-4428-bbed-31b46e746b8a",
+                    "cn": [
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "container|align": "stretchmax",
+                                "container|pack": "end",
+                                "designer|displayName": "WelcomeImageContainer",
+                                "itemId": "WelcomeImageContainer",
+                                "layout": "hbox",
+                                "layout|flex": 1,
+                                "width": "100%"
+                            },
+                            "name": "MyContainer",
+                            "designerId": "efdc58fc-2beb-4863-bf43-55e372665e30",
+                            "cn": [
+                                {
+                                    "type": "Ext.Img",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "WelcomeImg0",
+                                        "height": null,
+                                        "layout|flex": 1,
+                                        "src": "resources/images/welcome.jpg",
+                                        "width": ""
+                                    },
+                                    "name": "MyImg",
+                                    "designerId": "477477dd-7adb-426a-9c66-c1690d486903"
+                                },
+                                {
+                                    "type": "Ext.Img",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "WelcomeImg1",
+                                        "height": "",
+                                        "layout|flex": 1,
+                                        "src": "resources/images/welcome1.jpg",
+                                        "width": ""
+                                    },
+                                    "name": "MyImg1",
+                                    "designerId": "601af7c0-adf5-4488-85b7-c01c76414b47"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "NewUserLabel",
+                                "docked": null,
+                                "html": "New User?",
+                                "padding": 2,
+                                "ui": null,
+                                "width": null
+                            },
+                            "name": "MyLabel",
+                            "designerId": "818cd5d3-88f2-4b02-9cc8-cfb638ad069d"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "action-round",
+                        "docked": null,
+                        "height": 41,
+                        "itemId": "registerButton",
+                        "text": "Register",
+                        "ui": "action-round",
+                        "width": 110
+                    },
+                    "name": "MyButton7",
+                    "designerId": "4d8bf31a-03b1-4ab0-9d11-4144fb854a16"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "BottomToolbar",
+                "designer|uiInterfaceName": "light",
+                "docked": "bottom",
+                "height": 55,
+                "ui": "light"
+            },
+            "name": "MyToolbar1",
+            "designerId": "84a76314-1200-4499-a217-f27964baf495"
+        }
+    ]
+}
