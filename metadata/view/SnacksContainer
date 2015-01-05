@@ -26,7 +26,25 @@
                 "title": "Snacks"
             },
             "name": "MyToolbar4",
-            "designerId": "ce91129d-91cd-4e38-9a00-cd4f14bbe4bf"
+            "designerId": "ce91129d-91cd-4e38-9a00-cd4f14bbe4bf",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "back",
+                        "itemId": "logout",
+                        "text": "Logout",
+                        "ui": "back"
+                    },
+                    "name": "MyButton5",
+                    "designerId": "cad54a8e-da20-4042-8dc1-a646b47cb636"
+                }
+            ]
         },
         {
             "type": "Ext.dataview.DataView",

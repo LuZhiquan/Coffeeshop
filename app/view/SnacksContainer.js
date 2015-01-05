@@ -19,6 +19,7 @@ Ext.define('Coffeeshop.view.SnacksContainer', {
 
     requires: [
         'Ext.Toolbar',
+        'Ext.Button',
         'Ext.dataview.DataView',
         'Ext.XTemplate'
     ],
@@ -30,7 +31,15 @@ Ext.define('Coffeeshop.view.SnacksContainer', {
                 xtype: 'toolbar',
                 docked: 'top',
                 height: 60,
-                title: 'Snacks'
+                title: 'Snacks',
+                items: [
+                    {
+                        xtype: 'button',
+                        itemId: 'logout',
+                        ui: 'back',
+                        text: 'Logout'
+                    }
+                ]
             },
             {
                 xtype: 'dataview',

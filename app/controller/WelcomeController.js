@@ -33,13 +33,27 @@ Ext.define('Coffeeshop.controller.WelcomeController', {
     },
 
     loginTapped: function(button, e, eOpts) {
-        var form = button.up('formpanel'),
+        var ereg = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/,
+            form = button.up('formpanel'),
             usernameField = form.down('#username'),
             passwordField = form.down('#password'),
             username = usernameField.getValue(),
             password = passwordField.getValue();
 
         // TODO: check username and password
+        if (username.length < 1 || password.length < 1) {
+            navigator.notification.alert('Username and password must be entered!', null, 'Error', 'Dismiss');
+            return;
+        }
+
+        if (!ereg.test(username)) {
+            navigator.notification.alert('Username format is invalid!', null, 'Error', 'Dismiss');
+            return;
+        }
+
+        // Cleanup
+        usernameField.setValue('');
+        passwordField.setValue('');
 
         // Show home page
         var navigationView = form.up('#mainnavview');

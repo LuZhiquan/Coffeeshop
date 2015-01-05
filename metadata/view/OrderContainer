@@ -45,6 +45,22 @@
                     },
                     "name": "MyButton",
                     "designerId": "aaf03f49-982a-42cd-bbbd-d69b2defbac5"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "back",
+                        "itemId": "logout",
+                        "text": "Logout",
+                        "ui": "back"
+                    },
+                    "name": "MyButton4",
+                    "designerId": "8ac30934-f40f-4bfc-81d7-3cce3449bf19"
                 }
             ]
         },

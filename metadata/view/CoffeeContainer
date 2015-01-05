@@ -27,7 +27,25 @@
                 "title": "Coffee"
             },
             "name": "MyToolbar2",
-            "designerId": "6b7174bf-cb11-4d0e-b821-0e492db35de5"
+            "designerId": "6b7174bf-cb11-4d0e-b821-0e492db35de5",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "back",
+                        "itemId": "logout",
+                        "text": "Logout",
+                        "ui": "back"
+                    },
+                    "name": "MyButton2",
+                    "designerId": "49a9856c-3527-4a24-8d06-bc8bc50cc945"
+                }
+            ]
         },
         {
             "type": "Ext.dataview.DataView",

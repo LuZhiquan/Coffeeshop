@@ -19,6 +19,19 @@ Ext.define('Coffeeshop.controller.HomeController', {
     config: {
         views: [
             'HomePanel'
-        ]
+        ],
+
+        control: {
+            "button#logout": {
+                tap: 'logoutButtonTapped'
+            }
+        }
+    },
+
+    logoutButtonTapped: function(button, e, eOpts) {
+        var navigationView = button.up('#mainnavview');
+        navigationView.pop();
+        navigator.notification.alert("Logged out!", null, "Success", "Dismiss");
     }
+
 });

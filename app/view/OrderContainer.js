@@ -40,6 +40,12 @@ Ext.define('Coffeeshop.view.OrderContainer', {
                         ui: 'confirm',
                         width: 100,
                         text: 'Checkout'
+                    },
+                    {
+                        xtype: 'button',
+                        itemId: 'logout',
+                        ui: 'back',
+                        text: 'Logout'
                     }
                 ]
             },

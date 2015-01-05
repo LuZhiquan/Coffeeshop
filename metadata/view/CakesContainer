@@ -27,7 +27,25 @@
                 "title": "Cakes"
             },
             "name": "MyToolbar5",
-            "designerId": "dd09ef4d-3815-461a-8ab0-3d59f940e9bc"
+            "designerId": "dd09ef4d-3815-461a-8ab0-3d59f940e9bc",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "back",
+                        "itemId": "logout",
+                        "text": "Logout",
+                        "ui": "back"
+                    },
+                    "name": "MyButton3",
+                    "designerId": "bba53fd5-6c54-43c4-98db-c78946fbb7dc"
+                }
+            ]
         },
         {
             "type": "Ext.dataview.DataView",

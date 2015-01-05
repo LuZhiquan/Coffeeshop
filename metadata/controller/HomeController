@@ -12,5 +12,28 @@
         ]
     },
     "name": "MyController",
-    "designerId": "010e6e9b-33ce-4ff2-9ea0-74d4b8d9c7f2"
+    "designerId": "010e6e9b-33ce-4ff2-9ea0-74d4b8d9c7f2",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#logout",
+                "designer|targetType": "Ext.Button",
+                "fn": "logoutButtonTapped",
+                "implHandler": [
+                    "var navigationView = button.up('#mainnavview');",
+                    "navigationView.pop();",
+                    "navigator.notification.alert(\"Logged out!\", null, \"Success\", \"Dismiss\");"
+                ],
+                "name": "tap"
+            },
+            "name": "logoutButtonTapped",
+            "designerId": "f0d4f930-87b7-41fe-8a91-7548d83f4fb5"
+        }
+    ]
 }
